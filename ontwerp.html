@@ -194,6 +194,21 @@
     <div class="copy">© 2026 Moerman Hoveniers · Sfeervolle buitenruimtes · TuinKeur gecertificeerd</div>
   </div>
 </footer>
+<script>
+  window.mhLoadAnalytics = function () {
+    if (window._mhGaLoaded) return;
+    window._mhGaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-31TKJBGZSX';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-31TKJBGZSX');
+  };
+</script>
 <script src="cookieconsent.js" defer></script>
 </body>
 </html>
