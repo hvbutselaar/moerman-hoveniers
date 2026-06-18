@@ -9,7 +9,7 @@ $bericht = htmlspecialchars(trim($_POST['bericht'] ?? ''), ENT_QUOTES, 'UTF-8');
 if (!$naam || !$email || !$bericht) {
     http_response_code(400); echo '{"ok":false}'; exit;
 }
-$to      = 'hvbutselaar@hotmail.nl';
+$to      = 'info@moermanhoveniers.nl';
 $subject = '=?UTF-8?B?' . base64_encode('Nieuw bericht via moermanhoveniers.nl') . '?=';
 $body    = "Naam: $naam\r\nE-mail: $email\r\n\r\nBericht:\r\n$bericht";
 $headers = implode("\r\n", [
