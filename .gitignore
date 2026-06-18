@@ -11,3 +11,10 @@ current website/
 .claude/
 .DS_Store
 Thumbs.db
+
+# Tijdelijke hero-vergelijkingspagina's
+hero-preview-a.html
+hero-preview-b.html
+hero-preview-c.html
+seo_patch.py
+ga_patch.py
