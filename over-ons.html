@@ -79,13 +79,26 @@
   .keur li{display:flex;gap:12px;align-items:center;margin-bottom:12px;font-weight:600}
   .keur li svg{width:22px;height:22px;stroke:var(--mag);fill:none;stroke-width:2;flex:0 0 22px}
 
+  /* RATING BADGE */
+  .rating-badge{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:44px;flex-wrap:wrap}
+  .rating-badge .score{font-family:'Fraunces',serif;font-size:64px;line-height:1;color:var(--mag);font-weight:500}
+  .rating-badge .meta{text-align:left}
+  .rating-badge .stars{display:flex;gap:3px;margin-bottom:6px}
+  .rating-badge .stars svg{width:22px;height:22px;fill:var(--mag)}
+  .rating-badge .meta p{color:#6a686c;font-size:14px;margin:0}
+
   /* REVIEWS */
   .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-  .review{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px 30px;display:flex;flex-direction:column}
-  .review .quote{font-family:'Fraunces',serif;font-size:54px;line-height:.6;color:var(--mag);height:30px}
-  .review p{color:#4f4d51;font-size:16px;margin:6px 0 22px;flex:1}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column}
+  .review .rhead{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+  .review .cijfer{flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;font-family:'Fraunces',serif;font-size:18px;font-weight:500;display:flex;align-items:center;justify-content:center}
+  .review .rtitle{font-weight:700;font-size:15px;color:var(--char);line-height:1.3}
+  .review p{color:#4f4d51;font-size:15px;margin:0 0 22px;flex:1}
   .review .who{font-weight:700;font-size:15px}
   .review .where{font-size:13px;color:#8a888c}
+  .reviews-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+  .reviews-src{text-align:center;color:#8a888c;font-size:13px;margin-top:22px}
+  .reviews-src a{color:var(--mag)}
 
   /* CTA band */
   .ctaband{background:var(--green2);color:#fff;border-radius:32px;padding:64px;text-align:center;position:relative;overflow:hidden}
@@ -177,26 +190,56 @@
     <div class="head">
       <span class="eyebrow">Recensies</span>
       <h2>Wat klanten over ons zeggen</h2>
-      <p>Een greep uit de reacties van klanten op de Veluwe en in de omgeving.</p>
+      <p>Onze klanten beoordelen ons werk op HovenierNederland, het onafhankelijke recensieplatform voor hoveniers.</p>
     </div>
+
+    <div class="rating-badge">
+      <span class="score">9,0</span>
+      <div class="meta">
+        <div class="stars" aria-label="4,5 van 5 sterren">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset="50%" stop-color="#A90083"/><stop offset="50%" stop-color="#dcd6cb"/></linearGradient></defs><path fill="url(#half)" d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg>
+        </div>
+        <p>Gemiddeld uit 13 recensies op HovenierNederland</p>
+      </div>
+    </div>
+
     <div class="reviews">
       <div class="review">
-        <div class="quote">&ldquo;</div>
-        <p>Van ontwerp tot oplevering verliep alles soepel en netjes. Onze tuin is precies geworden zoals we voor ogen hadden.</p>
-        <span class="who">Familie de Vries</span><span class="where">Barneveld</span>
+        <div class="rhead"><span class="cijfer">8,6</span><span class="rtitle">Betrouwbare fijne tuinman</span></div>
+        <p>Al jaren een fijne tuinman, die mijn tuin op een goede manier onderhoudt. Betrouwbaar en vakkundig.</p>
+        <span class="who">Noud Hooyman</span><span class="where">Arnhem · februari 2026</span>
       </div>
       <div class="review">
-        <div class="quote">&ldquo;</div>
-        <p>Vakkundig, betrokken en altijd bereikbaar. Het onderhoud wordt al jaren keurig verzorgd.</p>
-        <span class="who">Mevr. Jansen</span><span class="where">Veenendaal</span>
+        <div class="rhead"><span class="cijfer">9,1</span><span class="rtitle">Goed werk geleverd</span></div>
+        <p>Van een verwaarloosde tuin iets moois gemaakt.</p>
+        <span class="who">Ank Wassink</span><span class="where">Scherpenzeel · november 2025</span>
       </div>
       <div class="review">
-        <div class="quote">&ldquo;</div>
-        <p>Heldere offerte, goed meegedacht en een prachtig eindresultaat. Een aanrader.</p>
-        <span class="who">Dhr. Bakker</span><span class="where">Uddel</span>
+        <div class="rhead"><span class="cijfer">9,0</span><span class="rtitle">Ontzettend blij met onze nieuwe tuin en veranda!</span></div>
+        <p>Gerben heeft op basis van onze wensen een mooi ontwerp gemaakt en dit aangevuld met goede tips. Keurig netjes gewerkt! Wij zijn erg blij met het eindresultaat.</p>
+        <span class="who">Joke Hol</span><span class="where">Ede · juni 2022</span>
+      </div>
+      <div class="review">
+        <div class="rhead"><span class="cijfer">8,0</span><span class="rtitle">Strak en onderhoudsvriendelijk</span></div>
+        <p>Van onze onverzorgde wildernis-tuin een super strakke, onderhoudsvriendelijke tuin gemaakt. Erg klantvriendelijk en de tegels zijn heel netjes gelegd. Zeker een aanrader.</p>
+        <span class="who">Bianca van den Broek</span><span class="where">Barneveld · maart 2022</span>
+      </div>
+      <div class="review">
+        <div class="rhead"><span class="cijfer">8,9</span><span class="rtitle">Zeer goede hovenier</span></div>
+        <p>Maakt tijdig een afspraak, gaat zorgvuldig om met de beplanting. Ruimt alles netjes op en heeft kennis van zaken.</p>
+        <span class="who">Koen Verhoeff</span><span class="where">Wageningen · januari 2019</span>
       </div>
     </div>
-    <p style="text-align:center;color:#8a888c;font-size:13px;margin-top:28px"><em>(Voorbeeldrecensies — te vervangen door echte reacties van klanten.)</em></p>
+
+    <div class="reviews-actions">
+      <a href="https://hoveniernederland.nl/hovenier/provincies/gelderland/harskamp/moerman-hoveniers/" target="_blank" rel="noopener" class="btn green">Bekijk ons profiel</a>
+      <a href="https://hoveniernederland.nl/recensie/?id=32624&keurmerk=tuinkeur" target="_blank" rel="noopener" class="btn">Schrijf een recensie</a>
+    </div>
+    <p class="reviews-src">Recensies afkomstig van <a href="https://hoveniernederland.nl/hovenier/provincies/gelderland/harskamp/moerman-hoveniers/" target="_blank" rel="noopener">HovenierNederland</a>.</p>
   </div>
 </section>
 
