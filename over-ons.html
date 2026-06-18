@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Over ons — Moerman Hoveniers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--mag:#A90083;--char:#38363A;--green:#4b6b4f;--green2:#3c5840;--cream:#f3efe7;--sand:#ece6da;--card:#fffdf9;--line:#e7e1d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--char);background:var(--cream);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--mag)}
+  .btn{display:inline-block;background:var(--mag);color:#fff;padding:15px 32px;border-radius:40px;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(169,0,131,.35)}
+  .btn.green{background:var(--green)}
+  .btn.green:hover{box-shadow:0 12px 28px rgba(75,107,79,.35)}
+
+  /* NAV */
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;max-width:1180px;margin:0 auto}
+  .nav img{height:54px}
+  .nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+  .nav a{color:#fff;font-size:15px;font-weight:500;opacity:.92;transition:opacity .2s}
+  .nav a:hover{opacity:1}
+  .nav a.active{opacity:1;border-bottom:2px solid var(--mag);padding-bottom:2px}
+  .nav .cta{border:1.5px solid rgba(255,255,255,.6);padding:9px 20px;border-radius:30px}
+  .nav .cta:hover{background:#fff;color:var(--char)}
+
+  /* HERO (compact banner) */
+  .hero{position:relative;color:#fff;display:flex;align-items:flex-end;min-height:480px;padding:150px 0 64px;
+    background:linear-gradient(90deg,rgba(56,54,58,.6),rgba(56,54,58,.2) 60%),linear-gradient(0deg,rgba(56,54,58,.5),transparent 45%),url('img/veranda.jpg');
+    background-size:cover;background-position:center}
+  .hero .wrap{width:100%}
+  .hero-inner{max-width:660px}
+  .crumb{font-size:14px;opacity:.85;margin-bottom:14px}
+  .crumb a{border-bottom:1px solid rgba(255,255,255,.4)}
+  .hero h1{font-size:clamp(42px,6vw,72px);font-weight:300;margin:6px 0 16px}
+  .hero p{font-size:19px;max-width:520px;opacity:.95}
+
+  /* SECTIONS */
+  .sec{padding:90px 0}
+  .sec.alt{background:var(--sand)}
+  .head{text-align:center;max-width:620px;margin:0 auto 50px}
+  .head h2{font-size:clamp(30px,4vw,46px);margin-top:12px}
+  .head p{color:#6a686c;margin-top:14px}
+
+  /* STORY split */
+  .story{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+  .story h2{font-size:clamp(28px,3.6vw,42px);font-weight:500;margin:14px 0 18px}
+  .story p{color:#5d5b5f;font-size:17px;margin-bottom:16px}
+  .story .pic{border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+  .story .pic img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* TUINKEUR highlight */
+  .keur{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+  .keur .badge{width:120px;height:120px;border-radius:50%;background:rgba(169,0,131,.1);display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+  .keur .badge svg{width:56px;height:56px;stroke:var(--mag);fill:none;stroke-width:2}
+  .keur h2{font-size:clamp(28px,3.6vw,42px);font-weight:500;margin:12px 0 18px}
+  .keur p{color:#5d5b5f;font-size:17px;margin-bottom:14px}
+  .keur ul{list-style:none;margin-top:18px}
+  .keur li{display:flex;gap:12px;align-items:center;margin-bottom:12px;font-weight:600}
+  .keur li svg{width:22px;height:22px;stroke:var(--mag);fill:none;stroke-width:2;flex:0 0 22px}
+
+  /* REVIEWS */
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px 30px;display:flex;flex-direction:column}
+  .review .quote{font-family:'Fraunces',serif;font-size:54px;line-height:.6;color:var(--mag);height:30px}
+  .review p{color:#4f4d51;font-size:16px;margin:6px 0 22px;flex:1}
+  .review .who{font-weight:700;font-size:15px}
+  .review .where{font-size:13px;color:#8a888c}
+
+  /* CTA band */
+  .ctaband{background:var(--green2);color:#fff;border-radius:32px;padding:64px;text-align:center;position:relative;overflow:hidden}
+  .ctaband::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border:8px solid rgba(255,255,255,.12);border-radius:50%}
+  .ctaband h2{color:#fff;font-size:clamp(30px,4vw,46px);margin-bottom:16px;font-weight:500;position:relative}
+  .ctaband p{opacity:.9;font-size:18px;margin-bottom:30px;position:relative}
+  .ctaband .btn{background:#fff;color:var(--green2);position:relative}
+  .ctaband .btn:hover{background:var(--mag);color:#fff}
+
+  /* FOOTER */
+  footer.ft{background:var(--char);color:#cfcdce;padding:56px 0 30px}
+  footer.ft .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  footer.ft img{height:62px}
+  footer.ft .links{display:flex;gap:24px;font-size:14px;flex-wrap:wrap}
+  footer.ft .links a:hover{color:#fff}
+  footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
+
+  @media(max-width:880px){
+    .nav ul{display:none}
+    .story,.keur{grid-template-columns:1fr}
+    .ctaband{padding:44px 28px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo-white.png" alt="Moerman Hoveniers"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="over-ons.html" class="active">Over ons</a></li>
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="werk.html">Ons werk</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="cta">Offerte aanvragen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap"><div class="hero-inner">
+    <span class="eyebrow" style="color:#fff;opacity:.9">Ons bedrijf</span>
+    <h1>Vakmanschap met<br>persoonlijke aandacht</h1>
+    <p>Een hoveniersbedrijf uit Harskamp dat tuinen ontwerpt, aanlegt en onderhoudt met oog voor detail en duurzame keuzes.</p>
+  </div></div>
+</section>
+
+<!-- STORY -->
+<section class="sec">
+  <div class="wrap">
+    <div class="story">
+      <div>
+        <span class="eyebrow">Ons verhaal</span>
+        <h2>Sfeervolle buitenruimtes, met zorg gemaakt</h2>
+        <p>Moerman Hoveniers is een hoveniersbedrijf op de Veluwe, gevestigd in Harskamp. Wij geloven dat een tuin meer is dan een mooi resultaat: het is een plek om te leven, tot rust te komen en te genieten.</p>
+        <p>Van het eerste ontwerp tot het jaarlijkse onderhoud werkt u met één vast, betrokken team. Wij denken met u mee, kiezen voor kwaliteit en duurzame materialen, en leveren werk af waar wij trots op zijn.</p>
+        <p><em>(Voorbeeldtekst — te vervangen door het definitieve bedrijfsverhaal.)</em></p>
+        <div style="margin-top:28px"><a href="werk.html" class="btn green">Bekijk ons werk</a></div>
+      </div>
+      <div class="pic"><img src="img/hero-pond.jpg" alt="Een door Moerman aangelegde tuin"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TUINKEUR -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="keur">
+      <div>
+        <div class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.3L12 14.6 7.2 17l.9-5.3L4.2 7.7l5.4-.8z"/></svg></div>
+        <span class="eyebrow">Erkend vakmanschap</span>
+        <h2>TuinKeur gecertificeerd</h2>
+      </div>
+      <div>
+        <p>Als TuinKeur-gecertificeerd hovenier voldoen wij aan strenge eisen op het gebied van vakmanschap, betrouwbaarheid en kwaliteit. U weet zo zeker dat uw tuin in deskundige handen is.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Erkend vakmanschap met kwaliteitsgarantie</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Heldere afspraken en eerlijke offertes</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Duurzame keuzes en verantwoorde materialen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Recensies</span>
+      <h2>Wat klanten over ons zeggen</h2>
+      <p>Een greep uit de reacties van klanten op de Veluwe en in de omgeving.</p>
+    </div>
+    <div class="reviews">
+      <div class="review">
+        <div class="quote">&ldquo;</div>
+        <p>Van ontwerp tot oplevering verliep alles soepel en netjes. Onze tuin is precies geworden zoals we voor ogen hadden.</p>
+        <span class="who">Familie de Vries</span><span class="where">Barneveld</span>
+      </div>
+      <div class="review">
+        <div class="quote">&ldquo;</div>
+        <p>Vakkundig, betrokken en altijd bereikbaar. Het onderhoud wordt al jaren keurig verzorgd.</p>
+        <span class="who">Mevr. Jansen</span><span class="where">Veenendaal</span>
+      </div>
+      <div class="review">
+        <div class="quote">&ldquo;</div>
+        <p>Heldere offerte, goed meegedacht en een prachtig eindresultaat. Een aanrader.</p>
+        <span class="who">Dhr. Bakker</span><span class="where">Uddel</span>
+      </div>
+    </div>
+    <p style="text-align:center;color:#8a888c;font-size:13px;margin-top:28px"><em>(Voorbeeldrecensies — te vervangen door echte reacties van klanten.)</em></p>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="ctaband">
+      <h2>Benieuwd wat wij voor uw tuin kunnen betekenen?</h2>
+      <p>Wij denken graag met u mee. Neem vrijblijvend contact op voor een eerste gesprek.</p>
+      <a href="contact.html" class="btn">Neem contact op</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <img src="img/logo-white.png" alt="Moerman Hoveniers">
+    <div class="links"><a href="over-ons.html">Over ons</a><a href="index.html#diensten">Diensten</a><a href="werk.html">Ons werk</a><a href="contact.html">Contact</a><a href="privacy.html">Privacyverklaring</a><a href="voorwaarden.html">Algemene voorwaarden</a><a href="#" data-mh-prefs>Cookie-instellingen</a></div>
+    <div class="copy">© 2026 Moerman Hoveniers · Sfeervolle buitenruimtes · TuinKeur gecertificeerd</div>
+  </div>
+</footer>
+<script src="cookieconsent.js" defer></script>
+</body>
+</html>

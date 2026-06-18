@@ -1,0 +1,13 @@
+# Ontwikkel-artefacten — niet publiceren op GitHub Pages
+versie-1-editorial.html
+versie-2-modern.html
+versie-3-natuurlijk.html
+Moerman Hoveniers - Ontwerpgids.html
+
+# Originele full-res bronfoto's (alleen lokaal nodig)
+current website/
+
+# Lokale preview-config en troep
+.claude/
+.DS_Store
+Thumbs.db

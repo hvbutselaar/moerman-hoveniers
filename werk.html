@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ons werk — Moerman Hoveniers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--mag:#A90083;--char:#38363A;--green:#4b6b4f;--green2:#3c5840;--cream:#f3efe7;--sand:#ece6da;--card:#fffdf9;--line:#e7e1d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--char);background:var(--cream);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--mag)}
+  .btn{display:inline-block;background:var(--mag);color:#fff;padding:15px 32px;border-radius:40px;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(169,0,131,.35)}
+
+  /* NAV */
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;max-width:1180px;margin:0 auto}
+  .nav img{height:54px}
+  .nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+  .nav a{color:#fff;font-size:15px;font-weight:500;opacity:.92;transition:opacity .2s}
+  .nav a:hover{opacity:1}
+  .nav a.active{opacity:1;border-bottom:2px solid var(--mag);padding-bottom:2px}
+  .nav .cta{border:1.5px solid rgba(255,255,255,.6);padding:9px 20px;border-radius:30px}
+  .nav .cta:hover{background:#fff;color:var(--char)}
+
+  /* HERO */
+  .hero{position:relative;color:#fff;display:flex;align-items:center;min-height:440px;padding:150px 0 90px;
+    background:linear-gradient(90deg,rgba(56,54,58,.6),rgba(56,54,58,.2) 60%),url('img/projecten/tuin-kootwijk/cover.jpg');
+    background-size:cover;background-position:center}
+  .hero .wrap{width:100%}
+  .hero-inner{max-width:640px}
+  .hero h1{font-size:clamp(42px,6vw,72px);font-weight:300;margin:18px 0 18px}
+  .hero p{font-size:19px;max-width:520px;opacity:.95}
+
+  /* SECTIONS */
+  .sec{padding:96px 0}
+  .head{text-align:center;max-width:620px;margin:0 auto 56px}
+  .head h2{font-size:clamp(30px,4vw,46px);margin-top:12px}
+  .head p{color:#6a686c;margin-top:14px}
+
+  /* PROJECT GRID */
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .pcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;color:inherit;transition:transform .25s,box-shadow .25s}
+  a.pcard:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(56,54,58,.12)}
+  .pcard-disabled{cursor:default}
+  .pcard-img{position:relative;aspect-ratio:3/2;background-size:cover;background-position:center}
+  .pcard-disabled .pcard-img{filter:grayscale(.15) brightness(.97)}
+  .pcard-soon{position:absolute;top:14px;left:14px;background:rgba(56,54,58,.82);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+  .pcard-body{padding:24px 26px 28px}
+  .pcard-meta{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mag)}
+  .pcard h3{font-size:22px;font-weight:600;margin:8px 0 10px}
+  .pcard-body p{color:#6a686c;font-size:14px}
+  .pcard-link{display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:var(--green)}
+
+  /* FOOTER */
+  footer.ft{background:var(--char);color:#cfcdce;padding:56px 0 30px}
+  footer.ft .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  footer.ft img{height:62px}
+  footer.ft .links{display:flex;gap:24px;font-size:14px;flex-wrap:wrap}
+  footer.ft .links a:hover{color:#fff}
+  footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
+
+  @media(max-width:880px){ .nav ul{display:none} }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo-white.png" alt="Moerman Hoveniers"></a>
+    <ul>
+<li><a href="index.html">Home</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="werk.html" class="active">Ons werk</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="cta">Offerte aanvragen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap"><div class="hero-inner">
+    <span class="eyebrow" style="color:#fff;opacity:.85">Ons werk</span>
+    <h1>Projecten waar wij trots op zijn</h1>
+    <p>Van strakke achtertuinen tot sfeervolle veranda's en waterpartijen — een greep uit de tuinen die wij ontwierpen, aanlegden en onderhouden.</p>
+  </div></div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Elk project is maatwerk</h2>
+      <p>Geen standaardoplossingen, maar tuinen die passen bij de plek én de mensen die er gebruik van maken. Bekijk een selectie van ons werk.</p>
+    </div>
+    <div class="pgrid" id="projectGrid"></div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <img src="img/logo-white.png" alt="Moerman Hoveniers">
+    <div class="links"><a href="over-ons.html">Over ons</a><a href="index.html#diensten">Diensten</a><a href="werk.html">Ons werk</a><a href="contact.html">Contact</a><a href="privacy.html">Privacyverklaring</a><a href="voorwaarden.html">Algemene voorwaarden</a><a href="#" data-mh-prefs>Cookie-instellingen</a></div>
+    <div class="copy">© 2026 Moerman Hoveniers · Sfeervolle buitenruimtes · TuinKeur gecertificeerd</div>
+  </div>
+</footer>
+
+<script src="projects.js"></script>
+<script>renderGrid('#projectGrid');</script>
+<script src="cookieconsent.js" defer></script>
+</body>
+</html>

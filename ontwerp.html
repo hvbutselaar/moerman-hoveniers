@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ontwerp — Moerman Hoveniers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--mag:#A90083;--char:#38363A;--green:#4b6b4f;--green2:#3c5840;--cream:#f3efe7;--sand:#ece6da;--card:#fffdf9;--line:#e7e1d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--char);background:var(--cream);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--mag)}
+  .btn{display:inline-block;background:var(--mag);color:#fff;padding:15px 32px;border-radius:40px;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(169,0,131,.35)}
+  .btn.green{background:var(--green)}
+  .btn.green:hover{box-shadow:0 12px 28px rgba(75,107,79,.35)}
+
+  /* NAV */
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;max-width:1180px;margin:0 auto}
+  .nav img{height:54px}
+  .nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+  .nav a{color:#fff;font-size:15px;font-weight:500;opacity:.92;transition:opacity .2s}
+  .nav a:hover{opacity:1}
+  .nav a.active{opacity:1;border-bottom:2px solid var(--mag);padding-bottom:2px}
+  .nav .cta{border:1.5px solid rgba(255,255,255,.6);padding:9px 20px;border-radius:30px}
+  .nav .cta:hover{background:#fff;color:var(--char)}
+
+  /* HERO (compact banner) */
+  .hero{position:relative;color:#fff;display:flex;align-items:flex-end;min-height:480px;padding:150px 0 64px;
+    background:linear-gradient(90deg,rgba(56,54,58,.6),rgba(56,54,58,.2) 60%),linear-gradient(0deg,rgba(56,54,58,.5),transparent 45%),url('img/allium.jpg');
+    background-size:cover;background-position:center}
+  .hero .wrap{width:100%}
+  .hero-inner{max-width:660px}
+  .crumb{font-size:14px;opacity:.85;margin-bottom:14px}
+  .crumb a{border-bottom:1px solid rgba(255,255,255,.4)}
+  .hero h1{font-size:clamp(42px,6vw,72px);font-weight:300;margin:6px 0 16px}
+  .hero p{font-size:19px;max-width:520px;opacity:.95}
+
+  /* SECTIONS */
+  .sec{padding:90px 0}
+  .sec.alt{background:var(--sand)}
+  .head{text-align:center;max-width:620px;margin:0 auto 50px}
+  .head h2{font-size:clamp(30px,4vw,46px);margin-top:12px}
+  .head p{color:#6a686c;margin-top:14px}
+
+  /* INTRO split */
+  .intro{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+  .intro h2{font-size:clamp(28px,3.6vw,42px);font-weight:500;margin:14px 0 18px}
+  .intro p{color:#5d5b5f;font-size:17px;margin-bottom:16px}
+  .intro .pic{border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+  .intro .pic img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* STEPS */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;counter-reset:step}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px 30px;position:relative}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:'Fraunces',serif;font-size:30px;color:var(--mag);display:block;margin-bottom:14px}
+  .step h3{font-size:20px;font-weight:600;margin-bottom:8px}
+  .step p{color:#6a686c;font-size:15px}
+
+  /* CTA band */
+  .ctaband{background:var(--green2);color:#fff;border-radius:32px;padding:64px;text-align:center;position:relative;overflow:hidden}
+  .ctaband::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border:8px solid rgba(255,255,255,.12);border-radius:50%}
+  .ctaband h2{color:#fff;font-size:clamp(30px,4vw,46px);margin-bottom:16px;font-weight:500;position:relative}
+  .ctaband p{opacity:.9;font-size:18px;margin-bottom:30px;position:relative}
+  .ctaband .btn{background:#fff;color:var(--green2);position:relative}
+  .ctaband .btn:hover{background:var(--mag);color:#fff}
+
+  /* OTHER SERVICES strip */
+  .svc-links{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .svc-link{display:flex;justify-content:space-between;align-items:center;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px 30px;transition:transform .25s,box-shadow .25s}
+  .svc-link:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(56,54,58,.1)}
+  .svc-link .lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mag)}
+  .svc-link h3{font-size:22px;font-weight:600;margin-top:6px}
+  .svc-link .arrow{font-size:24px;color:var(--green)}
+
+  /* FOOTER */
+  footer.ft{background:var(--char);color:#cfcdce;padding:56px 0 30px}
+  footer.ft .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  footer.ft img{height:62px}
+  footer.ft .links{display:flex;gap:24px;font-size:14px;flex-wrap:wrap}
+  footer.ft .links a:hover{color:#fff}
+  footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
+
+  @media(max-width:880px){
+    .nav ul{display:none}
+    .intro,.svc-links{grid-template-columns:1fr}
+    .ctaband{padding:44px 28px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo-white.png" alt="Moerman Hoveniers"></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="werk.html">Ons werk</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="cta">Offerte aanvragen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap"><div class="hero-inner">
+    <div class="crumb"><a href="index.html#diensten">Diensten</a> · Ontwerp</div>
+    <span class="eyebrow" style="color:#fff;opacity:.9">Onze diensten</span>
+    <h1>Ontwerp</h1>
+    <p>Een doordacht tuinontwerp brengt uw wensen samen met de mogelijkheden van de ruimte — voordat de eerste schop de grond in gaat.</p>
+  </div></div>
+</section>
+
+<!-- INTRO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <span class="eyebrow">Over ontwerp</span>
+        <h2>Uw tuin, eerst op papier</h2>
+        <p>Wij beginnen met luisteren: hoe wilt u uw tuin gebruiken, welke sfeer zoekt u en wat past bij uw woning en omgeving? Op basis daarvan maken wij een persoonlijk ontwerp met een heldere indeling, beplanting en materialen.</p>
+        <p>Met een 3D-impressie ziet u uw nieuwe tuin tot in detail vóór de aanleg begint, zodat u met een gerust hart keuzes maakt. <em>(Voorbeeldtekst — te vervangen door de definitieve omschrijving.)</em></p>
+      </div>
+      <div class="pic"><img src="img/mix1.jpg" alt="Beplantingsplan en tuinontwerp"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Zo werkt het</span>
+      <h2>Van eerste idee tot ontwerp</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Kennismaking</h3><p>Een vrijblijvend gesprek bij u in de tuin, waarin wij uw wensen en de mogelijkheden bespreken.</p></div>
+      <div class="step"><h3>Schetsontwerp</h3><p>Wij vertalen uw wensen naar een eerste indeling, met aandacht voor zichtlijnen en gebruik.</p></div>
+      <div class="step"><h3>3D-impressie</h3><p>U ziet uw tuin in beeld gebracht, met beplanting, bestrating en materialen op schaal.</p></div>
+      <div class="step"><h3>Definitief plan</h3><p>Na uw feedback werken wij het ontwerp af tot een plan dat klaar is voor de aanleg.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Verder kijken</span>
+      <h2>Onze andere diensten</h2>
+    </div>
+    <div class="svc-links">
+      <a class="svc-link" href="aanleg.html"><div><span class="lbl">Dienst</span><h3>Aanleg</h3></div><span class="arrow">→</span></a>
+      <a class="svc-link" href="onderhoud.html"><div><span class="lbl">Dienst</span><h3>Onderhoud</h3></div><span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="ctaband">
+      <h2>Benieuwd wat er voor uw tuin mogelijk is?</h2>
+      <p>Wij denken graag met u mee. Neem vrijblijvend contact op voor een eerste gesprek.</p>
+      <a href="contact.html" class="btn">Vraag een ontwerp aan</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <img src="img/logo-white.png" alt="Moerman Hoveniers">
+    <div class="links"><a href="over-ons.html">Over ons</a><a href="index.html#diensten">Diensten</a><a href="werk.html">Ons werk</a><a href="contact.html">Contact</a><a href="privacy.html">Privacyverklaring</a><a href="voorwaarden.html">Algemene voorwaarden</a><a href="#" data-mh-prefs>Cookie-instellingen</a></div>
+    <div class="copy">© 2026 Moerman Hoveniers · Sfeervolle buitenruimtes · TuinKeur gecertificeerd</div>
+  </div>
+</footer>
+<script src="cookieconsent.js" defer></script>
+</body>
+</html>

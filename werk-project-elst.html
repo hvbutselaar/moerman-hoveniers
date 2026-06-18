@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuin in Elst — Moerman Hoveniers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--mag:#A90083;--char:#38363A;--green:#4b6b4f;--green2:#3c5840;--cream:#f3efe7;--sand:#ece6da;--card:#fffdf9;--line:#e7e1d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--char);background:var(--cream);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--mag)}
+  .btn{display:inline-block;background:var(--mag);color:#fff;padding:15px 32px;border-radius:40px;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(169,0,131,.35)}
+  .btn.green{background:var(--green)}
+  .btn.green:hover{box-shadow:0 12px 28px rgba(75,107,79,.35)}
+
+  /* NAV */
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;max-width:1180px;margin:0 auto}
+  .nav img{height:54px}
+  .nav ul{display:flex;gap:32px;list-style:none;align-items:center}
+  .nav a{color:#fff;font-size:15px;font-weight:500;opacity:.92;transition:opacity .2s}
+  .nav a:hover{opacity:1}
+  .nav a.active{opacity:1;border-bottom:2px solid var(--mag);padding-bottom:2px}
+  .nav .cta{border:1.5px solid rgba(255,255,255,.6);padding:9px 20px;border-radius:30px}
+  .nav .cta:hover{background:#fff;color:var(--char)}
+
+  /* HERO */
+  .hero{position:relative;color:#fff;display:flex;align-items:flex-end;min-height:560px;padding:150px 0 60px;
+    background:linear-gradient(90deg,rgba(56,54,58,.55),rgba(56,54,58,.15) 65%),linear-gradient(0deg,rgba(56,54,58,.55),transparent 40%),url('img/projecten/project-elst/cover.jpg');
+    background-size:cover;background-position:center}
+  .hero .wrap{width:100%}
+  .hero-inner{max-width:720px}
+  .crumb{font-size:14px;opacity:.85;margin-bottom:14px}
+  .crumb a{border-bottom:1px solid rgba(255,255,255,.4)}
+  .hero h1{font-size:clamp(40px,6vw,72px);font-weight:300;margin:6px 0 0}
+
+  /* SECTIONS */
+  .sec{padding:90px 0}
+  .sec.alt{background:var(--sand)}
+  .head{text-align:center;max-width:620px;margin:0 auto 50px}
+  .head h2{font-size:clamp(30px,4vw,46px);margin-top:12px}
+  .head p{color:#6a686c;margin-top:14px}
+
+  /* INTRO */
+  .intro{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
+  .intro h2{font-size:clamp(28px,3.4vw,40px);font-weight:500;margin:12px 0 18px}
+  .intro p{color:#5d5b5f;font-size:17px;margin-bottom:16px}
+  .facts{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px 32px;display:grid;gap:18px}
+  .facts .row{display:grid;gap:2px}
+  .facts .lbl{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mag)}
+  .facts .val{font-size:18px;font-weight:700;font-family:'Fraunces',serif}
+
+  /* GALLERY (masonry) */
+  .gallery{columns:3;column-gap:16px}
+  .gallery img{width:100%;margin:0 0 16px;border-radius:18px;display:block;cursor:zoom-in;transition:filter .2s,transform .2s}
+  .gallery img:hover{filter:brightness(1.04)}
+
+  /* OTHER PROJECTS */
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+  .pcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;color:inherit;transition:transform .25s,box-shadow .25s}
+  a.pcard:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(56,54,58,.12)}
+  .pcard-disabled{cursor:default}
+  .pcard-img{position:relative;aspect-ratio:3/2;background-size:cover;background-position:center}
+  .pcard-disabled .pcard-img{filter:grayscale(.15) brightness(.97)}
+  .pcard-soon{position:absolute;top:14px;left:14px;background:rgba(56,54,58,.82);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+  .pcard-body{padding:22px 24px 26px}
+  .pcard-meta{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mag)}
+  .pcard h3{font-size:21px;font-weight:600;margin:8px 0 10px}
+  .pcard-body p{color:#6a686c;font-size:14px}
+  .pcard-link{display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:var(--green)}
+  .center{text-align:center;margin-top:46px}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;background:rgba(31,29,33,.94);display:none;align-items:center;justify-content:center;z-index:100}
+  .lb.open{display:flex}
+  .lb img{max-width:90vw;max-height:85vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:none;width:52px;height:52px;border-radius:50%;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .lb button:hover{background:var(--mag)}
+  .lb .close{top:24px;right:24px;font-size:20px}
+  .lb .prev{left:24px;top:50%;transform:translateY(-50%)}
+  .lb .next{right:24px;top:50%;transform:translateY(-50%)}
+
+  /* FOOTER */
+  footer.ft{background:var(--char);color:#cfcdce;padding:56px 0 30px}
+  footer.ft .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  footer.ft img{height:62px}
+  footer.ft .links{display:flex;gap:24px;font-size:14px;flex-wrap:wrap}
+  footer.ft .links a:hover{color:#fff}
+  footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
+
+  @media(max-width:880px){
+    .nav ul{display:none}
+    .intro{grid-template-columns:1fr;gap:36px}
+    .gallery{columns:2}
+    .lb .prev{left:10px}.lb .next{right:10px}
+  }
+  @media(max-width:560px){ .gallery{columns:1} }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="index.html"><img src="img/logo-white.png" alt="Moerman Hoveniers"></a>
+    <ul>
+<li><a href="index.html">Home</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="index.html#diensten">Diensten</a></li>
+      <li><a href="werk.html" class="active">Ons werk</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="cta">Offerte aanvragen</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap"><div class="hero-inner">
+    <div class="crumb"><a href="werk.html">Ons werk</a> · Elst</div>
+    <span class="eyebrow" style="color:#fff;opacity:.9">Ontwerp &amp; aanleg</span>
+    <h1>Tuin in Elst</h1>
+  </div></div>
+</section>
+
+<!-- INTRO -->
+<section class="sec">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <span class="eyebrow">Over dit project</span>
+        <h2>Van lege kavel tot groene thuis</h2>
+        <p>In Elst transformeerden wij een onbebenutte buitenruimte tot een volwaardige tuin die aansluit bij het karakter van de woning en de leefstijl van de bewoners. Het traject omvatte zowel het ontwerp als de complete aanleg.</p>
+        <p>Met oog voor proporties, beplanting en verharding leverde Moerman Hoveniers een tuin op die comfortabel in gebruik is en er in elk seizoen verzorgd uitziet. <em>(Voorbeeldtekst — te vervangen door de definitieve projectomschrijving.)</em></p>
+      </div>
+      <div class="facts">
+        <div class="row"><span class="lbl">Locatie</span><span class="val">Elst</span></div>
+        <div class="row"><span class="lbl">Type werk</span><span class="val">Ontwerp &amp; aanleg</span></div>
+        <div class="row"><span class="lbl">Opgeleverd</span><span class="val">2024</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">In beeld</span>
+      <h2>Beelden van het project</h2>
+    </div>
+    <div class="gallery" id="gallery">
+      <img src="img/projecten/project-elst/g1.jpg" alt="Tuin in Elst — beeld 1">
+      <img src="img/projecten/project-elst/g2.jpg" alt="Tuin in Elst — beeld 2">
+      <img src="img/projecten/project-elst/g3.jpg" alt="Tuin in Elst — beeld 3">
+      <img src="img/projecten/project-elst/g4.jpg" alt="Tuin in Elst — beeld 4">
+      <img src="img/projecten/project-elst/g5.jpg" alt="Tuin in Elst — beeld 5">
+      <img src="img/projecten/project-elst/g6.jpg" alt="Tuin in Elst — beeld 6">
+      <img src="img/projecten/project-elst/g7.jpg" alt="Tuin in Elst — beeld 7">
+      <img src="img/projecten/project-elst/g8.jpg" alt="Tuin in Elst — beeld 8">
+    </div>
+  </div>
+</section>
+
+<!-- OTHER PROJECTS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Meer van ons werk</span>
+      <h2>Andere projecten</h2>
+    </div>
+    <div class="pgrid" id="otherProjects"></div>
+    <div class="center"><a href="werk.html" class="btn green">Bekijk alle projecten</a></div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <img src="img/logo-white.png" alt="Moerman Hoveniers">
+    <div class="links"><a href="over-ons.html">Over ons</a><a href="index.html#diensten">Diensten</a><a href="werk.html">Ons werk</a><a href="contact.html">Contact</a><a href="privacy.html">Privacyverklaring</a><a href="voorwaarden.html">Algemene voorwaarden</a><a href="#" data-mh-prefs>Cookie-instellingen</a></div>
+    <div class="copy">© 2026 Moerman Hoveniers · Sfeervolle buitenruimtes · TuinKeur gecertificeerd</div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lightbox">
+  <button class="close" aria-label="Sluiten">✕</button>
+  <button class="prev" aria-label="Vorige">‹</button>
+  <img src="" alt="">
+  <button class="next" aria-label="Volgende">›</button>
+</div>
+
+<script src="projects.js"></script>
+<script>
+  renderOthers('project-elst', 3, '#otherProjects');
+
+  (function(){
+    var imgs = Array.prototype.slice.call(document.querySelectorAll('#gallery img'));
+    var lb = document.getElementById('lightbox');
+    var lbImg = lb.querySelector('img');
+    var idx = 0;
+    function show(i){ idx = (i + imgs.length) % imgs.length; lbImg.src = imgs[idx].src; lbImg.alt = imgs[idx].alt; }
+    function open(i){ show(i); lb.classList.add('open'); }
+    function close(){ lb.classList.remove('open'); }
+    imgs.forEach(function(im,i){ im.addEventListener('click', function(){ open(i); }); });
+    lb.querySelector('.close').addEventListener('click', close);
+    lb.querySelector('.prev').addEventListener('click', function(e){ e.stopPropagation(); show(idx-1); });
+    lb.querySelector('.next').addEventListener('click', function(e){ e.stopPropagation(); show(idx+1); });
+    lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+    document.addEventListener('keydown', function(e){
+      if(!lb.classList.contains('open')) return;
+      if(e.key === 'Escape') close();
+      if(e.key === 'ArrowLeft') show(idx-1);
+      if(e.key === 'ArrowRight') show(idx+1);
+    });
+  })();
+</script>
+<script src="cookieconsent.js" defer></script>
+</body>
+</html>
