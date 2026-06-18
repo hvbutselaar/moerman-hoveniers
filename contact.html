@@ -240,11 +240,37 @@
 </footer>
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', function(e){
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    var c = document.getElementById('confirm');
-    c.classList.add('show');
-    this.querySelector('button[type=submit]').textContent = 'Verzonden';
+    var form = this;
+    var btn  = form.querySelector('button[type=submit]');
+    var conf = document.getElementById('confirm');
+    btn.disabled = true;
+    btn.textContent = 'Bezig…';
+    fetch('contact-mail.php', {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.ok) {
+        conf.textContent = 'Bedankt voor uw bericht. Wij nemen spoedig contact met u op.';
+        conf.classList.add('show');
+        form.reset();
+        btn.textContent = 'Verzonden';
+      } else {
+        conf.textContent = 'Er ging iets mis. Bel 06†27 178 727 of mail info@moermanhoveniers.nl.';
+        conf.classList.add('show');
+        btn.disabled = false;
+        btn.textContent = 'Verstuur bericht';
+      }
+    })
+    .catch(function() {
+      conf.textContent = 'Geen verbinding. Probeer later opnieuw.';
+      conf.classList.add('show');
+      btn.disabled = false;
+      btn.textContent = 'Verstuur bericht';
+    });
   });
 </script>
 <script>
