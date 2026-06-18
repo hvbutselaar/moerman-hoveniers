@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hvbutselaar.github.io/moerman-hoveniers/sitemap.xml
