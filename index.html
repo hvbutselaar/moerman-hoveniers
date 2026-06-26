@@ -30,8 +30,8 @@
   .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:700;color:var(--mag)}
   .btn{display:inline-block;background:var(--mag);color:#fff;padding:15px 32px;border-radius:40px;font-weight:700;font-size:15px;transition:transform .2s,box-shadow .2s}
   .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(169,0,131,.35)}
-  .btn.green{background:var(--green)}
-  .btn.green:hover{box-shadow:0 12px 28px rgba(75,107,79,.35)}
+  .btn.green{background:var(--mag)}
+  .btn.green:hover{box-shadow:0 12px 28px rgba(169,0,131,.35)}
   .btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.7);color:#fff;margin-left:12px}
   .btn.ghost:hover{background:#fff;color:var(--char);box-shadow:none}
 
@@ -66,12 +66,10 @@
   /* SERVICES (warm cards) */
   .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
   .svc{display:block;color:inherit;background:var(--card);border-radius:24px;padding:34px 30px;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
-  .svc .more{display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:var(--green)}
+  .svc .more{display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:var(--mag)}
   .svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(56,54,58,.1)}
-  .svc .leaf{width:58px;height:58px;border-radius:50%;background:rgba(75,107,79,.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-  .svc .leaf svg{width:28px;height:28px;stroke:var(--green)}
-  .svc:nth-child(even) .leaf{background:rgba(169,0,131,.1)}
-  .svc:nth-child(even) .leaf svg{stroke:var(--mag)}
+  .svc .leaf{width:58px;height:58px;border-radius:50%;background:rgba(169,0,131,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .svc .leaf svg{width:28px;height:28px;stroke:var(--mag)}
   .svc h3{font-size:22px;font-weight:600;margin-bottom:10px}
   .svc p{color:#6a686c;font-size:15px}
 
@@ -86,12 +84,12 @@
   .split li svg{width:22px;height:22px;stroke:var(--mag);flex:0 0 22px}
 
   /* CTA band */
-  .ctaband{background:var(--green2);color:#fff;border-radius:32px;padding:64px;text-align:center;position:relative;overflow:hidden}
+  .ctaband{background:var(--mag);color:#fff;border-radius:32px;padding:64px;text-align:center;position:relative;overflow:hidden}
   .ctaband::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border:8px solid rgba(255,255,255,.12);border-radius:50%}
   .ctaband h2{color:#fff;font-size:clamp(30px,4vw,46px);margin-bottom:16px;font-weight:500;position:relative}
   .ctaband p{opacity:.9;font-size:18px;margin-bottom:30px;position:relative}
-  .ctaband .btn{background:#fff;color:var(--green2);position:relative}
-  .ctaband .btn:hover{background:var(--mag);color:#fff}
+  .ctaband .btn{background:#fff;color:var(--mag);position:relative}
+  .ctaband .btn:hover{background:var(--char);color:#fff}
 
   /* CONTACT */
   .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
