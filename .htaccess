@@ -9,6 +9,33 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# --- 301-redirects van de oude WordPress-structuur (behoud ranking/verkeer) ---
+# Hoofdpagina's oud -> nieuw
+RewriteRule ^tuinontwerp/?$ /ontwerp.html [L,R=301]
+RewriteRule ^aanleg/?$ /aanleg.html [L,R=301]
+RewriteRule ^tuinonderhoud/?$ /onderhoud.html [L,R=301]
+RewriteRule ^ons-werk/?$ /werk.html [L,R=301]
+RewriteRule ^recensies/?$ /over-ons.html [L,R=301]
+RewriteRule ^tuinkeur/?$ /over-ons.html [L,R=301]
+RewriteRule ^contact/afspraak-maken/?$ /contact.html [L,R=301]
+RewriteRule ^contact/?$ /contact.html [L,R=301]
+RewriteRule ^privacyverklaring/?$ /privacy.html [L,R=301]
+RewriteRule ^algemene-voorwaarden/?$ /voorwaarden.html [L,R=301]
+RewriteRule ^vijvers/?$ /werk-vijver-amerongen.html [L,R=301]
+RewriteRule ^houtbouw/?$ /werk-veranda-barneveld.html [L,R=301]
+
+# Oude projectposts met een nieuwe tegenhanger
+RewriteRule ^\d{4}/\d{2}/\d{2}/project-particuliere-tuin-veenendaal/?$ /werk-project-veenendaal.html [L,R=301]
+RewriteRule ^\d{4}/\d{2}/\d{2}/vijver-amerongen/?$ /werk-vijver-amerongen.html [L,R=301]
+# Geschrapte projecten (velp/elst) -> projectoverzicht
+RewriteRule ^\d{4}/\d{2}/\d{2}/project-.*$ /werk.html [L,R=301]
+
+# Alle overige blogposts (tuintips 2017-2023, datum-URL's) -> homepage
+RewriteRule ^\d{4}/\d{2}/\d{2}/.*$ / [L,R=301]
+# Blogoverzicht/categorie/auteur-archieven -> homepage
+RewriteRule ^actueel(/.*)?$ / [L,R=301]
+RewriteRule ^(category|author|tag)/.*$ / [L,R=301]
+
 # Nette 404-pagina in de huisstijl
 ErrorDocument 404 /404.html
 
