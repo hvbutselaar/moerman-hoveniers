@@ -256,6 +256,25 @@
   /* ---------- publieke API ---------- */
   window.mhOpenCookiePrefs = function () { openPrefs(); };
 
+  /* ---------- GA4-events (alleen na consent: gtag bestaat pas dan) ---------- */
+  window.mhTrack = function (name, params) {
+    if (typeof window.gtag !== 'function') return;
+    try { window.gtag('event', name, params || {}); } catch (e) {}
+  };
+
+  function bindClickEvents() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('tel:') === 0) {
+        window.mhTrack('klik_telefoon', { nummer: href.slice(4) });
+      } else if (href.indexOf('mailto:') === 0) {
+        window.mhTrack('klik_email', { adres: href.slice(7) });
+      }
+    });
+  }
+
   /* ---------- init ---------- */
   function init() {
     injectCSS();
@@ -265,6 +284,7 @@
       a.addEventListener('click', function (e) { e.preventDefault(); openPrefs(); });
     });
     applyConsent();              // laad embeds of toon placeholders volgens huidige keuze
+    bindClickEvents();           // GA4: klik_telefoon / klik_email
     if (!read()) buildBanner();  // eerste bezoek → banner
   }
 

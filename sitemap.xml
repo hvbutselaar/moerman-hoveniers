@@ -56,21 +56,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-project-1-velp.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-project-2-velp.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-project-elst.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-project-veenendaal.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

@@ -258,6 +258,7 @@
         conf.classList.add('show');
         form.reset();
         btn.textContent = 'Verzonden';
+        if (window.mhTrack) window.mhTrack('contact_formulier_verzonden');
       } else {
         conf.textContent = 'Er ging iets mis. Bel 06 27 178 727 of mail info@moermanhoveniers.nl.';
         conf.classList.add('show');
