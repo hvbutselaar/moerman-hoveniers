@@ -61,27 +61,27 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-kootwijk.html</loc>
+    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-voorthuizen.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-uddel.html</loc>
+    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-arnhem.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-veenendaal.html</loc>
+    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-ede.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-veranda-barneveld.html</loc>
+    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-poolberging-arnhem.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-veranda-uddel.html</loc>
+    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-veranda-velp.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -92,11 +92,6 @@
   </url>
   <url>
     <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-voortuin.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hvbutselaar.github.io/moerman-hoveniers/werk-zembad.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

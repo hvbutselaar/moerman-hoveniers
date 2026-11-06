@@ -100,6 +100,15 @@
   footer.ft .links a:hover{color:#fff}
   footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
 
+  /* WERKZAAMHEDEN */
+  .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .item{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+  .item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+  .item .body{padding:24px 26px 28px}
+  .item h3{font-size:21px;font-weight:600;margin-bottom:8px}
+  .item p{color:#6a686c;font-size:15px}
+  .item a{display:inline-block;margin-top:12px;font-weight:700;font-size:14px;color:var(--mag)}
+
   @media(max-width:880px){
     .nav ul{display:none}
     .intro,.svc-links{grid-template-columns:1fr}
@@ -138,16 +147,35 @@
       <div>
         <span class="eyebrow">Over aanleg</span>
         <h2>Het ontwerp wordt werkelijkheid</h2>
-        <p>Ons ervaren team verzorgt de complete aanleg: grondwerk, bestrating, beschoeiing, beplanting en verlichting. Wij werken netjes, planmatig en met oog voor de afwerking die het verschil maakt.</p>
-        <p>U heeft één aanspreekpunt van begin tot eind, en wij houden u gedurende het werk op de hoogte van de voortgang. <em>(Voorbeeldtekst — te vervangen door de definitieve omschrijving.)</em></p>
+        <p>Ons ervaren team verzorgt de complete aanleg van uw tuin: grondwerk, bestrating, beplanting en gazon, maar ook veranda's, schuren en bergingen, vijvers en beregening. Wij werken netjes, planmatig en met oog voor de afwerking die het verschil maakt.</p>
+        <p>U heeft één aanspreekpunt van begin tot eind, en wij houden u tijdens het werk op de hoogte van de voortgang.</p>
       </div>
-      <div class="pic"><img src="img/projecten/tuin-kootwijk/cover.jpg" alt="Aanleg van bestrating en beplanting"></div>
+      <div class="pic"><img src="img/projecten/poolberging-arnhem/g6.jpg" alt="Aangelegde tuin met terras, gazon en zwembad"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WERKZAAMHEDEN -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Wat wij aanleggen</span>
+      <h2>Alles voor uw tuin, uit één hand</h2>
+      <p>Van de eerste schop in de grond tot de laatste plant: wij leggen het allemaal zelf aan.</p>
+    </div>
+    <div class="items">
+      <div class="item"><img src="img/projecten/tuin-voorthuizen/g2.jpg" alt="Aangelegde tuin met grind en siergrassen" loading="lazy"><div class="body"><h3>Tuinen</h3><p>Complete tuinen, van grondwerk en drainage tot bestrating, beplanting en gazon. Wij leggen aan zoals het ontworpen is, tot in de details.</p><a href="werk.html">Bekijk onze tuinen →</a></div></div>
+      <div class="item"><img src="img/projecten/tuin-ede/cover.jpg" alt="Houten veranda met eethoek" loading="lazy"><div class="body"><h3>Veranda's</h3><p>Een veranda op maat, in hout dat past bij uw woning. Een beschutte plek om buiten te zitten, het hele jaar door.</p><a href="werk-veranda-velp.html">Bekijk veranda en schuur in Velp →</a></div></div>
+      <div class="item"><img src="img/projecten/poolberging-arnhem/g2.jpg" alt="Houten poolberging naast het zwembad" loading="lazy"><div class="body"><h3>Schuren en bergingen</h3><p>Een schuur of berging voor tuingereedschap, fietsen of alles rond het zwembad. Stevig gebouwd en mooi ingepast in de tuin.</p><a href="werk-poolberging-arnhem.html">Bekijk poolberging in Arnhem →</a></div></div>
+      <div class="item"><img src="img/projecten/vijver-amerongen/g4.jpg" alt="Aangelegde vijver met natuurstenen rand" loading="lazy"><div class="body"><h3>Vijvers</h3><p>Van strakke vijverbak tot natuurlijke waterpartij, inclusief folie, pomp, filter en waterplanten.</p><a href="werk-vijver-amerongen.html">Bekijk vijver in Amerongen →</a></div></div>
+      <div class="item"><img src="img/lawn.jpg" alt="Groen gazon met borders" loading="lazy"><div class="body"><h3>Beregening</h3><p>Een beregeningssysteem dat gazon en borders op het juiste moment water geeft. Leidingen en sproeiers liggen onzichtbaar in de tuin.</p></div></div>
+      <div class="item"><img src="img/projecten/bestrating/cover.jpg" alt="Tegels in grind naar het terras" loading="lazy"><div class="body"><h3>Bestrating en grind</h3><p>Terrassen, paden en opritten in klinkers, keramiek, natuursteen of grind, op een stevige fundering.</p><a href="werk-bestrating.html">Bekijk bestrating en grindwerk →</a></div></div>
     </div>
   </div>
 </section>
 
 <!-- STEPS -->
-<section class="sec alt">
+<section class="sec">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Zo werkt het</span>
@@ -155,15 +183,14 @@
     </div>
     <div class="steps">
       <div class="step"><h3>Voorbereiding</h3><p>Wij plannen het werk, regelen materialen en stemmen de planning helder met u af.</p></div>
-      <div class="step"><h3>Grondwerk</h3><p>Een stevige basis: afgraven, egaliseren en de fundering voor bestrating en beplanting.</p></div>
-      <div class="step"><h3>Realisatie</h3><p>Bestrating, beschoeiing, beplanting en elementen worden vakkundig aangelegd.</p></div>
+      <div class="step"><h3>Realisatie</h3><p>Eerst een stevige basis: afgraven, egaliseren en de fundering. Daarna leggen wij bestrating, beplanting, houtbouw, vijver en beregening vakkundig aan.</p></div>
       <div class="step"><h3>Oplevering</h3><p>Wij leveren de tuin netjes op en lichten het onderhoud voor het komende seizoen toe.</p></div>
     </div>
   </div>
 </section>
 
 <!-- OTHER SERVICES -->
-<section class="sec">
+<section class="sec alt">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Verder kijken</span>
@@ -177,7 +204,7 @@
 </section>
 
 <!-- CTA BAND -->
-<section class="sec alt">
+<section class="sec">
   <div class="wrap">
     <div class="ctaband">
       <h2>Klaar om uw tuin te laten aanleggen?</h2>

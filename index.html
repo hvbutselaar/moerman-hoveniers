@@ -54,6 +54,9 @@
   .hero h1{font-size:clamp(42px,6vw,76px);font-weight:300;margin:18px 0 22px}
   .hero h1 em{font-style:italic}
   .hero p{font-size:19px;max-width:480px;opacity:.95;margin-bottom:34px}
+  .hero-rating{margin-top:28px;font-size:15px}
+  .hero-rating a{border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:2px}
+  .hero-rating b{color:#fff;font-weight:700}
   .scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
 
   /* SECTIONS */
@@ -110,6 +113,20 @@
   footer.ft .links a:hover{color:#fff}
   footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
 
+  /* RECENSIES */
+  .rating{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:40px;flex-wrap:wrap}
+  .rating .score{font-family:'Fraunces',serif;font-size:64px;line-height:1;color:var(--mag);font-weight:500}
+  .rating .stars{display:flex;gap:3px;margin-bottom:6px}
+  .rating .stars svg{width:22px;height:22px;fill:var(--mag)}
+  .rating p{color:#6a686c;font-size:14px}
+  .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column}
+  .review .cijfer{width:46px;height:46px;border-radius:50%;background:var(--mag);color:#fff;font-family:'Fraunces',serif;font-size:18px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .review p{color:#4f4d51;font-size:15px;margin-bottom:20px;flex:1}
+  .review .who{font-weight:700;font-size:15px}
+  .review .where{font-size:13px;color:#8a888c}
+  .center{text-align:center;margin-top:40px}
+
   @media(max-width:880px){
     .nav ul{display:none}
     .split,.contact .grid{grid-template-columns:1fr}
@@ -127,6 +144,8 @@
     "email": "info@moermanhoveniers.nl",
     "address": {
       "@type": "PostalAddress",
+      "postOfficeBoxNumber": "64",
+      "postalCode": "6732 ZJ",
       "addressLocality": "Harskamp",
       "addressRegion": "Gelderland",
       "addressCountry": "NL"
@@ -137,15 +156,8 @@
       "longitude": 5.7667
     },
     "areaServed": [
-      { "@type": "City", "name": "Harskamp" },
-      { "@type": "City", "name": "Otterlo" },
-      { "@type": "City", "name": "Ede" },
-      { "@type": "City", "name": "Barneveld" },
-      { "@type": "City", "name": "Kootwijk" },
-      { "@type": "City", "name": "Kootwijkerbroek" },
-      { "@type": "City", "name": "Uddel" },
-      { "@type": "City", "name": "Veenendaal" },
-      { "@type": "City", "name": "Amerongen" }
+      { "@type": "AdministrativeArea", "name": "Gelderland" },
+      { "@type": "AdministrativeArea", "name": "Utrecht" }
     ],
     "hasCredential": "TuinKeur",
     "image": "https://hvbutselaar.github.io/moerman-hoveniers/img/hero-veranda.jpg",
@@ -184,6 +196,7 @@
     <p>Wij ontwerpen, realiseren en onderhouden tuinen die passen bij u — met oog voor detail en duurzame keuzes.</p>
     <a href="contact.html" class="btn">Vraag een ontwerp aan</a>
     <a href="werk.html" class="btn ghost">Bekijk ons werk</a>
+    <div class="hero-rating"><a href="#recensies">★ <b>9,0</b> uit 13 recensies op HovenierNederland</a></div>
   </div></div>
   <div class="scroll-hint">Scroll ↓</div>
 </section>
@@ -204,8 +217,31 @@
   </div>
 </section>
 
+<!-- RECENSIES -->
+<section class="sec" id="recensies">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Recensies</span>
+      <h2>Wat klanten over ons zeggen</h2>
+    </div>
+    <div class="rating">
+      <span class="score">9,0</span>
+      <div>
+        <div class="stars" aria-label="4,5 van 5 sterren"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset="50%" stop-color="#A90083"/><stop offset="50%" stop-color="#dcd6cb"/></linearGradient></defs><path fill="url(#half)" d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"/></svg></div>
+        <p>Gemiddeld uit 13 recensies op HovenierNederland</p>
+      </div>
+    </div>
+    <div class="reviews">
+      <div class="review"><span class="cijfer">9,0</span><p>Gerben heeft op basis van onze wensen een mooi ontwerp gemaakt en dit aangevuld met goede tips. Keurig netjes gewerkt!</p><span class="who">Joke Hol</span><span class="where">Ede</span></div>
+      <div class="review"><span class="cijfer">9,1</span><p>Van een verwaarloosde tuin iets moois gemaakt.</p><span class="who">Ank Wassink</span><span class="where">Scherpenzeel</span></div>
+      <div class="review"><span class="cijfer">8,6</span><p>Al jaren een fijne tuinman, die mijn tuin op een goede manier onderhoudt. Betrouwbaar en vakkundig.</p><span class="who">Noud Hooyman</span><span class="where">Arnhem</span></div>
+    </div>
+    <div class="center"><a href="over-ons.html#recensies" class="btn">Lees alle recensies</a></div>
+  </div>
+</section>
+
 <!-- SPLIT (ons werk) -->
-<section class="sec" id="werk">
+<section class="sec alt" id="werk">
   <div class="wrap">
     <div class="split">
       <div class="pic"><img src="img/patio.jpg" alt="Tuin met terras en eethoek"></div>
@@ -225,7 +261,7 @@
 </section>
 
 <!-- CTA BAND -->
-<section class="sec alt">
+<section class="sec">
   <div class="wrap">
     <div class="ctaband">
       <h2>Benieuwd wat wij voor uw tuin kunnen betekenen?</h2>
@@ -236,7 +272,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="sec contact" id="contact">
+<section class="sec alt contact" id="contact">
   <div class="wrap">
     <div class="grid">
       <div>
@@ -248,7 +284,8 @@
       <div class="cwidget">
         <div class="row"><div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div><div><div class="lbl">Telefoon</div><div class="val">06 27 178 727</div></div></div>
         <div class="row"><div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></div><div><div class="lbl">E-mail</div><div class="val">info@moermanhoveniers.nl</div></div></div>
-        <div class="row"><div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="lbl">Werkgebied</div><div class="val">Harskamp · Gelderland</div></div></div>
+        <div class="row"><div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="lbl">Werkgebied</div><div class="val">Gelderland, Utrecht en omstreken</div></div></div>
+        <div class="row"><div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></div><div><div class="lbl">Postadres</div><div class="val">Postbus 64, 6732 ZJ Harskamp</div></div></div>
       </div>
     </div>
   </div>

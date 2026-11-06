@@ -22,7 +22,15 @@ RewriteRule ^contact/?$ /contact.html [L,R=301]
 RewriteRule ^privacyverklaring/?$ /privacy.html [L,R=301]
 RewriteRule ^algemene-voorwaarden/?$ /voorwaarden.html [L,R=301]
 RewriteRule ^vijvers/?$ /werk-vijver-amerongen.html [L,R=301]
-RewriteRule ^houtbouw/?$ /werk-veranda-barneveld.html [L,R=301]
+RewriteRule ^houtbouw/?$ /werk-veranda-velp.html [L,R=301]
+
+# Hernoemde projectpagina's (locatie gecorrigeerd, nov 2026)
+RewriteRule ^werk-tuin-kootwijk\.html$ /werk-tuin-voorthuizen.html [L,R=301]
+RewriteRule ^werk-veranda-barneveld\.html$ /werk-poolberging-arnhem.html [L,R=301]
+RewriteRule ^werk-zembad\.html$ /werk-poolberging-arnhem.html [L,R=301]
+RewriteRule ^werk-tuin-veenendaal\.html$ /werk-tuin-ede.html [L,R=301]
+RewriteRule ^werk-tuin-uddel\.html$ /werk-tuin-arnhem.html [L,R=301]
+RewriteRule ^werk-veranda-uddel\.html$ /werk-veranda-velp.html [L,R=301]
 
 # Oude projectposts met een nieuwe tegenhanger
 RewriteRule ^\d{4}/\d{2}/\d{2}/project-particuliere-tuin-veenendaal/?$ /werk-project-veenendaal.html [L,R=301]

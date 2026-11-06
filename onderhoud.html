@@ -100,6 +100,15 @@
   footer.ft .links a:hover{color:#fff}
   footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
 
+  /* WERKZAAMHEDEN */
+  .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .item{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+  .item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+  .item .body{padding:24px 26px 28px}
+  .item h3{font-size:21px;font-weight:600;margin-bottom:8px}
+  .item p{color:#6a686c;font-size:15px}
+  .item a{display:inline-block;margin-top:12px;font-weight:700;font-size:14px;color:var(--mag)}
+
   @media(max-width:880px){
     .nav ul{display:none}
     .intro,.svc-links{grid-template-columns:1fr}
@@ -139,31 +148,51 @@
         <span class="eyebrow">Over onderhoud</span>
         <h2>Een verzorgde tuin, elk seizoen</h2>
         <p>Snoeien, bemesten, onkruid wieden, gazon verzorgen en de borders op peil houden: wij nemen het onderhoud volledig uit handen of ondersteunen u waar nodig. Zo blijft uw tuin het hele jaar door op zijn best.</p>
-        <p>Wij stemmen de frequentie en werkzaamheden af op uw tuin en uw wensen, met een vast aanspreekpunt dat uw tuin kent. <em>(Voorbeeldtekst — te vervangen door de definitieve omschrijving.)</em></p>
+        <p>Moerman is flexibel en werkt zoals u dat wilt. Sommige klanten kiezen voor vaste momenten in het jaar, anderen bellen ons wanneer het nodig is. Voor ieder wat wils: voor al het onderhoud kunt u bij ons terecht.</p>
       </div>
       <div class="pic"><img src="img/allium-soft.jpg" alt="Onderhoud van borders en beplanting"></div>
     </div>
   </div>
 </section>
 
-<!-- STEPS -->
+<!-- WERKZAAMHEDEN -->
 <section class="sec alt">
   <div class="wrap">
     <div class="head">
+      <span class="eyebrow">Wat wij onderhouden</span>
+      <h2>De hele tuin in goede handen</h2>
+      <p>Van borders en gazon tot vijver en beregening: wij houden alles in conditie.</p>
+    </div>
+    <div class="items">
+      <div class="item"><img src="img/projecten/veranda-velp/g5.jpg" alt="Bloeiende border met verbena" loading="lazy"><div class="body"><h3>Borders en beplanting</h3><p>Snoeien, wieden, bemesten en aanvullen waar nodig, zodat uw borders er elk seizoen verzorgd bij staan.</p></div></div>
+      <div class="item"><img src="img/lawn.jpg" alt="Verzorgd gazon" loading="lazy"><div class="body"><h3>Gazon</h3><p>Maaien, verticuteren, bijzaaien en bemesten voor een dicht en groen gazon.</p></div></div>
+      <div class="item"><img src="img/projecten/tuin-arnhem/g1.jpg" alt="Strakke haag rond een terras" loading="lazy"><div class="body"><h3>Hagen en bomen</h3><p>Hagen strak in vorm, en bomen en struiken op tijd gesnoeid.</p></div></div>
+      <div class="item"><img src="img/projecten/achtertuin/g9.jpg" alt="Grindpad tussen siergrassen" loading="lazy"><div class="body"><h3>Bestrating en grind</h3><p>Onkruid tussen de voegen en in het grind verwijderen, zodat paden en terrassen netjes blijven.</p></div></div>
+      <div class="item"><img src="img/projecten/vijver-amerongen/cover.jpg" alt="Vijver met natuurstenen rand" loading="lazy"><div class="body"><h3>Vijvers en beregening</h3><p>Vijvers schoonmaken en controleren, en de beregening in het voorjaar opstarten en voor de winter leegmaken.</p></div></div>
+      <div class="item"><img src="img/projecten/tuin-voorthuizen/g1.jpg" alt="Siergrassen van dichtbij" loading="lazy"><div class="body"><h3>Seizoensbeurt</h3><p>Een grote voorjaars- of najaarsbeurt: blad ruimen, terugsnoeien en de tuin klaarmaken voor het nieuwe seizoen.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
       <span class="eyebrow">Zo werkt het</span>
-      <h2>Onderhoud op maat</h2>
+      <h2>Onderhoud zoals het u past</h2>
+      <p>Vaste momenten of ad hoc: u bepaalt hoe vaak wij langskomen.</p>
     </div>
     <div class="steps">
-      <div class="step"><h3>Tuinscan</h3><p>Wij bekijken uw tuin en bepalen samen welk onderhoud nodig is en hoe vaak.</p></div>
-      <div class="step"><h3>Onderhoudsplan</h3><p>Een helder plan met werkzaamheden per seizoen, passend bij uw tuin en budget.</p></div>
-      <div class="step"><h3>Vaste verzorging</h3><p>Op afgesproken momenten houden wij beplanting, gazon en bestrating in conditie.</p></div>
-      <div class="step"><h3>Seizoenswerk</h3><p>Snoei, najaarsbeurt en voorjaarsklaar maken — uw tuin het hele jaar verzorgd.</p></div>
+      <div class="step"><h3>Kennismaking</h3><p>Wij bekijken uw tuin en bespreken wat u zelf doet en wat u aan ons overlaat.</p></div>
+      <div class="step"><h3>Vaste momenten</h3><p>Geen omkijken naar uw tuin? Dan komen wij op vaste momenten in het jaar langs, afgestemd op uw tuin.</p></div>
+      <div class="step"><h3>Of ad hoc</h3><p>Liever zelf bepalen wanneer? Bel ons als u hulp wilt, voor een snoeibeurt of een grote opruimronde.</p></div>
+      <div class="step"><h3>Vast aanspreekpunt</h3><p>Hoe vaak u ons ook nodig heeft: u heeft één aanspreekpunt dat uw tuin kent.</p></div>
     </div>
   </div>
 </section>
 
 <!-- OTHER SERVICES -->
-<section class="sec">
+<section class="sec alt">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Verder kijken</span>
@@ -177,7 +206,7 @@
 </section>
 
 <!-- CTA BAND -->
-<section class="sec alt">
+<section class="sec">
   <div class="wrap">
     <div class="ctaband">
       <h2>Uw tuin het hele jaar in goede handen?</h2>

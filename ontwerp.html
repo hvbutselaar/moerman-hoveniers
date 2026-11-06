@@ -100,6 +100,15 @@
   footer.ft .links a:hover{color:#fff}
   footer.ft .copy{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;opacity:.6;text-align:center}
 
+  /* WERKZAAMHEDEN */
+  .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .item{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+  .item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+  .item .body{padding:24px 26px 28px}
+  .item h3{font-size:21px;font-weight:600;margin-bottom:8px}
+  .item p{color:#6a686c;font-size:15px}
+  .item a{display:inline-block;margin-top:12px;font-weight:700;font-size:14px;color:var(--mag)}
+
   @media(max-width:880px){
     .nav ul{display:none}
     .intro,.svc-links{grid-template-columns:1fr}
@@ -138,16 +147,34 @@
       <div>
         <span class="eyebrow">Over ontwerp</span>
         <h2>Uw tuin, eerst op papier</h2>
-        <p>Wij beginnen met luisteren: hoe wilt u uw tuin gebruiken, welke sfeer zoekt u en wat past bij uw woning en omgeving? Op basis daarvan maken wij een persoonlijk ontwerp met een heldere indeling, beplanting en materialen.</p>
-        <p>Met een 3D-impressie ziet u uw nieuwe tuin tot in detail vóór de aanleg begint, zodat u met een gerust hart keuzes maakt. <em>(Voorbeeldtekst — te vervangen door de definitieve omschrijving.)</em></p>
+        <p>Wij beginnen met luisteren: hoe wilt u uw tuin gebruiken, welke sfeer zoekt u en wat past bij uw woning en omgeving? Op basis daarvan maken wij een persoonlijk tuinontwerp met een heldere indeling, beplanting en materialen.</p>
+        <p>In het ontwerp nemen wij alles mee wat in uw tuin komt: terras en paden, beplanting en gazon, maar ook een veranda, schuur of berging, een vijver of beregening. Zo past alles bij elkaar en weet u vooraf waar u aan toe bent.</p>
+        <p>Met een 3D-impressie ziet u uw nieuwe tuin tot in detail vóór de aanleg begint, zodat u met een gerust hart keuzes maakt.</p>
       </div>
       <div class="pic"><img src="img/mix1.jpg" alt="Beplantingsplan en tuinontwerp"></div>
     </div>
   </div>
 </section>
 
-<!-- STEPS -->
+<!-- WERKZAAMHEDEN -->
 <section class="sec alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Wat wij ontwerpen</span>
+      <h2>Eén plan voor de hele tuin</h2>
+      <p>Alles wat wij ontwerpen, kunnen wij ook aanleggen en onderhouden. Zo blijft uw tuin van eerste schets tot verzorgde tuin in dezelfde handen.</p>
+    </div>
+    <div class="items">
+      <div class="item"><img src="img/projecten/tuin-arnhem/g2.jpg" alt="Tuin in Arnhem met terras, gazon en borders" loading="lazy"><div class="body"><h3>Tuinen</h3><p>Van compacte stadstuin tot ruime achtertuin: een indeling met terras, paden, gazon en beplanting die past bij uw huis en hoe u de tuin gebruikt.</p><a href="werk.html">Bekijk onze tuinen →</a></div></div>
+      <div class="item"><img src="img/projecten/veranda-velp/g2.jpg" alt="Houten veranda met zithoek" loading="lazy"><div class="body"><h3>Veranda's, schuren en bergingen</h3><p>Houtbouw nemen wij mee in het ontwerp. Zo krijgt een veranda de beste plek in zon of schaduw, en valt een schuur of berging mooi weg in de tuin.</p><a href="werk-veranda-velp.html">Bekijk veranda en schuur in Velp →</a></div></div>
+      <div class="item"><img src="img/projecten/vijver-amerongen/cover.jpg" alt="Strakke vijver in Amerongen" loading="lazy"><div class="body"><h3>Vijvers</h3><p>Een strakke vijver als blikvanger of een natuurlijke waterpartij: wij bepalen de juiste plek, vorm en techniek, zodat het water helder blijft.</p><a href="werk-vijver-amerongen.html">Bekijk vijver in Amerongen →</a></div></div>
+      <div class="item"><img src="img/lawn.jpg" alt="Groen gazon met borders" loading="lazy"><div class="body"><h3>Beregening</h3><p>Beregening plannen wij vooraf in het ontwerp. Zo liggen leidingen en sproeiers onzichtbaar in de tuin en krijgt elke plant precies genoeg water.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Zo werkt het</span>
@@ -155,7 +182,7 @@
     </div>
     <div class="steps">
       <div class="step"><h3>Kennismaking</h3><p>Een vrijblijvend gesprek bij u in de tuin, waarin wij uw wensen en de mogelijkheden bespreken.</p></div>
-      <div class="step"><h3>Schetsontwerp</h3><p>Wij vertalen uw wensen naar een eerste indeling, met aandacht voor zichtlijnen en gebruik.</p></div>
+      <div class="step"><h3>Ontwerp</h3><p>Wij vertalen uw wensen naar een indeling, met aandacht voor zichtlijnen, zon en schaduw en hoe u de tuin gebruikt.</p></div>
       <div class="step"><h3>3D-impressie</h3><p>U ziet uw tuin in beeld gebracht, met beplanting, bestrating en materialen op schaal.</p></div>
       <div class="step"><h3>Definitief plan</h3><p>Na uw feedback werken wij het ontwerp af tot een plan dat klaar is voor de aanleg.</p></div>
     </div>
@@ -163,7 +190,7 @@
 </section>
 
 <!-- OTHER SERVICES -->
-<section class="sec">
+<section class="sec alt">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Verder kijken</span>
@@ -177,7 +204,7 @@
 </section>
 
 <!-- CTA BAND -->
-<section class="sec alt">
+<section class="sec">
   <div class="wrap">
     <div class="ctaband">
       <h2>Benieuwd wat er voor uw tuin mogelijk is?</h2>

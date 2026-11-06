@@ -1,8 +1,8 @@
 # Moerman Hoveniers
 
-> TuinKeur-gecertificeerd hoveniersbedrijf in Harskamp, Gelderland. Ontwerp, aanleg en onderhoud van sfeervolle buitenruimtes op en rond de Veluwe — actief in onder meer Harskamp, Otterlo, Ede, Barneveld, Kootwijk, Kootwijkerbroek, Uddel, Veenendaal en Amerongen.
+> TuinKeur-gecertificeerd hoveniersbedrijf in Harskamp, Gelderland. Ontwerp, aanleg en onderhoud van sfeervolle buitenruimtes in Gelderland, Utrecht en omstreken.
 
-Moerman Hoveniers verzorgt het complete traject voor particuliere tuinen: van een persoonlijk 3D-tuinontwerp via vakkundige aanleg (bestrating, beplanting, houtbouw, vijvers) tot onderhoud het hele jaar door. Motto: "Meer dan alleen een mooi resultaat."
+Moerman Hoveniers verzorgt het complete traject voor particuliere tuinen: van een persoonlijk 3D-tuinontwerp via vakkundige aanleg (bestrating, beplanting, schuren, veranda's, bergingen, vijvers en beregening) tot onderhoud het hele jaar door. Motto: "Meer dan alleen een mooi resultaat."
 
 Contact: info@moermanhoveniers.nl · 06 27 178 727 · Harskamp, Gelderland.
 
@@ -13,11 +13,14 @@ Contact: info@moermanhoveniers.nl · 06 27 178 727 · Harskamp, Gelderland.
 
 ## Projecten
 - [Ons werk](https://hvbutselaar.github.io/moerman-hoveniers/werk.html): overzicht van gerealiseerde tuinen, veranda's, vijvers en bestrating.
-- [Tuin in Kootwijk](https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-kootwijk.html): ontwerp en aanleg.
-- [Veranda in Barneveld](https://hvbutselaar.github.io/moerman-hoveniers/werk-veranda-barneveld.html): houtbouw en terras.
-- [Tuin in Veenendaal](https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-veenendaal.html): ontwerp en aanleg.
+- [Tuin in Voorthuizen](https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-voorthuizen.html): ontwerp en aanleg.
+- [Poolberging in Arnhem](https://hvbutselaar.github.io/moerman-hoveniers/werk-poolberging-arnhem.html): houten berging bij het zwembad, met terras en tuin.
+- [Tuin in Ede](https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-ede.html): ontwerp en aanleg.
+- [Tuin in Arnhem](https://hvbutselaar.github.io/moerman-hoveniers/werk-tuin-arnhem.html): ontwerp en aanleg rond een verhoogde vijver.
+- [Veranda en schuur in Velp](https://hvbutselaar.github.io/moerman-hoveniers/werk-veranda-velp.html): houtbouw.
+- [Achtertuin in Kootwijk](https://hvbutselaar.github.io/moerman-hoveniers/werk-achtertuin.html): ontwerp en aanleg.
+- [Bestrating & grindwerk](https://hvbutselaar.github.io/moerman-hoveniers/werk-bestrating.html): terrassen, paden en opritten.
 - [Vijver in Amerongen](https://hvbutselaar.github.io/moerman-hoveniers/werk-vijver-amerongen.html): vijver en water.
-- [Veranda in Uddel](https://hvbutselaar.github.io/moerman-hoveniers/werk-veranda-uddel.html): houtbouw.
 
 ## Over
 - [Over ons](https://hvbutselaar.github.io/moerman-hoveniers/over-ons.html): het verhaal achter het bedrijf, met klantbeoordelingen (9,0 op HovenierNederland.nl).
