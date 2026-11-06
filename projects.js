@@ -30,7 +30,7 @@ const PROJECTS = [
 /* Verberg klikgedrag voor projecten zonder eigen pagina, maar toon ze wel. */
 function projectCardHTML(p) {
   const inner = `
-      <div class="pcard-img" style="background-image:url('img/projecten/${p.slug}/cover.jpg')">
+      <div class="pcard-img" style="background-image:url('img/projecten/${p.slug}/cover.jpg?v=2')">
         ${p.built ? '' : '<span class="pcard-soon">Binnenkort</span>'}
       </div>
       <div class="pcard-body">

@@ -69,7 +69,8 @@ AddDefaultCharset UTF-8
 
 # ---------------------------------------------------------------- CACHING
 # Afbeeldingen wijzigen zelden in place -> lang cachen.
-# CSS/JS worden in place bewerkt zonder cache-busting -> kort houden zodat updates doorkomen.
+# CSS/JS worden in place bewerkt -> altijd hervalideren (304 als ongewijzigd), anders zien
+# terugkerende bezoekers dagenlang een oude versie (bv. projectlijst in projects.js).
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/jpeg              "access plus 1 year"
@@ -77,8 +78,8 @@ AddDefaultCharset UTF-8
   ExpiresByType image/webp              "access plus 1 year"
   ExpiresByType image/svg+xml           "access plus 1 year"
   ExpiresByType image/x-icon            "access plus 1 year"
-  ExpiresByType text/css                "access plus 7 days"
-  ExpiresByType application/javascript  "access plus 7 days"
+  ExpiresByType text/css                "access plus 0 seconds"
+  ExpiresByType application/javascript  "access plus 0 seconds"
   ExpiresByType text/html               "access plus 0 seconds"
 </IfModule>
 
@@ -87,6 +88,6 @@ AddDefaultCharset UTF-8
     Header set Cache-Control "public, max-age=31536000"
   </FilesMatch>
   <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "public, max-age=604800"
+    Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
